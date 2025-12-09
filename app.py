@@ -48,10 +48,10 @@ expected_X_columns_for_df = [
 
 @app.route('/')
 def serve_intro():
-    return render('index0.html')
+    return send_file('index0.html')
 @app.route('/predict_form')
 def serve_index():
-    return render('index.html')
+    return send_file('index.html')
 
 
 @app.route('/get_locations', methods=['GET'])
@@ -113,3 +113,4 @@ def predict():
 if __name__ == '__main__':
 
     app.run(debug=True, host='127.0.0.1', port=5000)
+
